@@ -5,3 +5,4 @@ Feature: Login Feature Test
     And I enter valid password
     When I click on login button
     Then I should be able to successfully login
+
