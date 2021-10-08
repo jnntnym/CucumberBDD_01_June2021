@@ -9,3 +9,4 @@ public class profilePageStep {
 }
 
 // When create choose Java option instead of java 8 ( java 8 has error)
+// Login.feature  Page > Command + Mouse hover over + Click > you are in this page
