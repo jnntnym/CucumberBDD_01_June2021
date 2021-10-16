@@ -1,10 +1,15 @@
 package stepDef;
 
+import base.BrowserSetup;
 import io.cucumber.java.en.Then;
+import pageObject.profilePage;
 
-public class profilePageStep {
+public class profilePageStep extends BrowserSetup {
+    profilePage pf = new profilePage(driver);
+
     @Then("I should be able to successfully login")
     public void iShouldBeAbleToSuccessfullyLogin() {
+        pf.getActualwelcomeMessage();
     }
 }
 
