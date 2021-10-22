@@ -47,6 +47,7 @@ public class Hook extends BrowserSetup {
 
     @After
     public void endTest(){
+        driver.quit();
         // happen after each test
         // what happen if test fails? what you will do for the  failing test case? screenshot? logs? ??
     }
