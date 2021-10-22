@@ -98,7 +98,9 @@ public class signupPage extends BrowserSetup {
         Select ddlYear = new Select(year);
         ddlYear.selectByValue(birthYearValue);
     }
-    // Gender Radio btn
+    // HW: Gender Radio btn
+    // Find out the list of radio button and select the 2nd radio button
+    // select the first radio by using label
     public void genderMale(){
         male.click();
     }
@@ -114,18 +116,11 @@ public class signupPage extends BrowserSetup {
     // Verifying message
     // Thank you for sign up, here your id - verifying with id-TTC8kKTg
     // div[@id="success_message"]/div/text() >> "Thank you for sign up, here your id - "
+    // HW - COMPLETE THE Signup FORM AND SIGN UP FOR AN USER AND ASSERT "Thank you for sign up" message
      public void getThankYouMessage(){
       String actualMessage = thankYouMessage.getText();
-      String expectedMessage = "Thank you for sign up, here your id -";
+      String expectedMessage = "Thank you for sign up"; //
       System.out.println(actualMessage);
     //  Assert.assertEquals(actualMessage, expectedMessage );
     }
-
-
-
-
-
-
-
-
 }
