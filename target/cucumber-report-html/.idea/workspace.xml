@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02193dac-3a8c-4177-ace3-37c79680d9c0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../src/test/java/pageObject/signupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/test/java/pageObject/signupPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/test/java/stepDef/signupStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/test/java/stepDef/signupStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/TestRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/base/BrowserSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/base/BrowserSetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/pageObject/loginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/pageObject/loginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/pageObject/profilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/pageObject/profilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/pageObject/signupPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/pageObject/signupPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/stepDef/Hook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/stepDef/Hook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/stepDef/loginStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/stepDef/loginStep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/stepDef/profilePageStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/stepDef/profilePageStep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-classes/stepDef/signupStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-classes/stepDef/signupStep.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1zsOUHiTqQne2mmrCvhpuN6G2sS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02193dac-3a8c-4177-ace3-37c79680d9c0" name="Changes" comment="" />
+      <created>1634933343103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634933343103</updated>
+    </task>
+    <servers />
+  </component>
+</project>

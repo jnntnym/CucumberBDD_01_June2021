@@ -18,6 +18,7 @@ public class signupStep extends BrowserSetup {
         sgnUp.enterFirstName(faker.name().firstName());
         sgnUp.enterLastName(faker.name().lastName());
         sgnUp.enterEmail(faker.internet().safeEmailAddress());
+        // Password
         sgnUp.enterPassword("test@12345");
         sgnUp.enterConfirmPassword("test@12345");
         // Birth Date

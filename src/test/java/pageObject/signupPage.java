@@ -32,6 +32,10 @@ public class signupPage extends BrowserSetup {
     //<input type="password" name="confirmPassword" value="" class="form-control input-lg" placeholder="Confirm Password">
     @FindBy(how = How.NAME, using = "confirmPassword")
     public WebElement confirmPassword;
+
+
+
+
     // <select name="month" class="form-control input-lg">
     @FindBy (how = How.NAME, using = "month")
     public WebElement month;
@@ -92,11 +96,11 @@ public class signupPage extends BrowserSetup {
     }
     public void enterBirthDay(int birthDayValue){
         Select ddlDay = new Select(day);
-        ddlDay.selectByIndex(birthDayValue);    // if ByIndex > int
+        ddlDay.selectByIndex(birthDayValue);
     }
     public void enterBirthYear(String birthYearValue){
         Select ddlYear = new Select(year);
-        ddlYear.selectByValue(birthYearValue);
+          ddlYear.selectByValue(birthYearValue);
     }
     // HW: Gender Radio btn
     // Find out the list of radio button and select the 2nd radio button
@@ -119,8 +123,8 @@ public class signupPage extends BrowserSetup {
     // HW - COMPLETE THE Signup FORM AND SIGN UP FOR AN USER AND ASSERT "Thank you for sign up" message
      public void getThankYouMessage(){
       String actualMessage = thankYouMessage.getText();
-      String expectedMessage = "Thank you for sign up"; //
+      String expectedMessage = "Thank you for sign up";
       System.out.println(actualMessage);
-    //  Assert.assertEquals(actualMessage, expectedMessage );
+      Assert.assertEquals(actualMessage, expectedMessage );
     }
 }
