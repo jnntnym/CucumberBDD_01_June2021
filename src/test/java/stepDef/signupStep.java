@@ -34,11 +34,12 @@ public class signupStep extends BrowserSetup {
     public void iAgreeWithTerms() {
         sgnUp.agreeClickBox();
     }
+    //click on Create My Account button
     @When("I click on Create My Account button")
     public void iClickOnCreateMyAccountButton() {
         sgnUp.clickCreateMyAccountBtn();
     }
-
+    // See thank You For SignUp Message
     @Then("I should see Thank you for sign up message")
     public void iShouldSeeThankYouForSignUpMessage() {
         sgnUp.getThankYouMessage();

@@ -36,9 +36,6 @@ public class signupPage extends BrowserSetup {
     @FindBy(how = How.NAME, using = "confirmPassword")
     public WebElement confirmPassword;
 
-
-
-
     // <select name="month" class="form-control input-lg">
     @FindBy (how = How.NAME, using = "month")
     public WebElement month;
@@ -55,7 +52,7 @@ public class signupPage extends BrowserSetup {
     @FindBy(how = How.ID, using = "female")
     public WebElement female;
 
-    //****************************
+    //***********Dynamic Select*****************
     @FindBy(how= How.NAME, using = "gender")
     public WebElement radioGender;
     //****************************
@@ -111,33 +108,30 @@ public class signupPage extends BrowserSetup {
         Select ddlYear = new Select(year);
           ddlYear.selectByValue(birthYearValue);
     }
+    // select the first radio> 'Male' by using label
     // Male click
     //  public void genderMale(){
     //     male.click();
     //  }
 
-    // Female click
+    // select the Second radio> 'Female' by using label
     //  public void genderFemale(){
     //      female.click();
     //  }
 
     //***************** HW: Gender Radio btn******************************
-    // Find out the list of radio button and select the 2nd radio button
-    // select the first radio by using label
+    // Find out the list of radio button and select the 2nd radio button (Female)
     //To find the all radio button > //input[@type = 'radio']
     public void genderChoice(){
         List<WebElement> gender = radioGender.findElements(By.xpath("//input[@type = 'radio']"));
+        System.out.println("Size of gender: "+gender.size());
         for(int i=0; i<gender.size(); i++){
-            System.out.println("Size of gender: "+gender.size());
             WebElement genderChoice = gender.get(i);
             String genderValue = genderChoice.getAttribute("value");
-            System.out.println("Value of gender:"+genderValue);
-            if (genderValue.equalsIgnoreCase("Male")){
+            if (genderValue.equalsIgnoreCase("Female")){
                 genderChoice.click();
+                System.out.println(genderChoice.isSelected());  // boolean value return print
                 }
-                else{
-                System.out.println("didn't find locator");
-            }
         }
 
     }
