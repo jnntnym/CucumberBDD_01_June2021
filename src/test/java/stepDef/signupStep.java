@@ -25,8 +25,9 @@ public class signupStep extends BrowserSetup {
         sgnUp.enterBirthMonth("Dec");
         sgnUp.enterBirthDay(15);
         sgnUp.enterBirthYear("1984");
-        // Gender
-        sgnUp.genderMale();
+        // when Gender is male
+        // sgnUp.genderMale();
+        sgnUp.genderChoice();   // Conditional male click
     }
     // Agree check box click
     @And("I agree with terms")
@@ -37,6 +38,7 @@ public class signupStep extends BrowserSetup {
     public void iClickOnCreateMyAccountButton() {
         sgnUp.clickCreateMyAccountBtn();
     }
+
     @Then("I should see Thank you for sign up message")
     public void iShouldSeeThankYouForSignUpMessage() {
         sgnUp.getThankYouMessage();

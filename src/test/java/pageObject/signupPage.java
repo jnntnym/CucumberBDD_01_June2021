@@ -1,6 +1,7 @@
 package pageObject;
 
 import base.BrowserSetup;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.List;
 
 public class signupPage extends BrowserSetup {
     // rule for PageObject is -- You should  create a PageFactory for every single page that you are going to create
@@ -51,6 +54,12 @@ public class signupPage extends BrowserSetup {
     // <input type="radio" name="gender" value="female" id="female">
     @FindBy(how = How.ID, using = "female")
     public WebElement female;
+
+    //****************************
+    @FindBy(how= How.NAME, using = "gender")
+    public WebElement radioGender;
+    //****************************
+
     // <input class="form-check-input" type="checkbox" value="1" name="agree" id="defaultCheck1">
     @FindBy(how = How.NAME, using = "agree")
     public WebElement agree;
@@ -102,15 +111,39 @@ public class signupPage extends BrowserSetup {
         Select ddlYear = new Select(year);
           ddlYear.selectByValue(birthYearValue);
     }
-    // HW: Gender Radio btn
-    // Find out the list of radio button and select the 2nd radio button
-    // select the first radio by using label
-    public void genderMale(){
-        male.click();
-    }
+    // Male click
+    //  public void genderMale(){
+    //     male.click();
+    //  }
+
+    // Female click
     //  public void genderFemale(){
     //      female.click();
     //  }
+
+    //***************** HW: Gender Radio btn******************************
+    // Find out the list of radio button and select the 2nd radio button
+    // select the first radio by using label
+    //To find the all radio button > //input[@type = 'radio']
+    public void genderChoice(){
+        List<WebElement> gender = radioGender.findElements(By.xpath("//input[@type = 'radio']"));
+        for(int i=0; i<gender.size(); i++){
+            System.out.println("Size of gender: "+gender.size());
+            WebElement genderChoice = gender.get(i);
+            String genderValue = genderChoice.getAttribute("value");
+            System.out.println("Value of gender:"+genderValue);
+            if (genderValue.equalsIgnoreCase("Male")){
+                genderChoice.click();
+                }
+                else{
+                System.out.println("didn't find locator");
+            }
+        }
+
+    }
+    // *********************************************************************
+
+    // Checkbox click
     public void agreeClickBox(){
         agree.click();
     }
@@ -122,7 +155,7 @@ public class signupPage extends BrowserSetup {
     // div[@id="success_message"]/div/text() >> "Thank you for sign up, here your id - "
     // HW - COMPLETE THE Signup FORM AND SIGN UP FOR AN USER AND ASSERT "Thank you for sign up" message
      public void getThankYouMessage(){
-      String actualMessage = thankYouMessage.getText();
+      String actualMessage = thankYouMessage.getText().substring(0,21);
       String expectedMessage = "Thank you for sign up";
       System.out.println(actualMessage);
       Assert.assertEquals(actualMessage, expectedMessage );
